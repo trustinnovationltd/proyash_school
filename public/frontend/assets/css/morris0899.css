@@ -1,0 +1,483 @@
+#donut-chart path {
+  stroke: none !important;
+}
+.single-progress .progress_wrapper {
+    padding: 35px 0 60px 0;
+}
+
+/* Child Detail Section */
+
+.child-info-section .info-card {
+  background-color: #fff6f9; /* Light lavender/neutral pink */
+  border: 2px solid #ffe0eb;
+  border-radius: 20px;
+  padding: 25px 20px;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+.child-info-section .info-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.child-info-section .info-card h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #e91e63;
+  margin-bottom: 8px;
+}
+
+.child-info-section .info-card p {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #222;
+  margin: 0;
+}
+
+#chart-wrapper {
+  height: 520px;
+  width: 100%;
+}
+
+/* PDF Card */
+
+.pdf-actions .btn,
+.the-4-box .btn {
+  all: unset;
+}
+
+.pdf-card {
+  border-radius: 15px;
+  padding: 15px 20px;
+  background-color: #f8f9fa;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+.pdf-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.pdf-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.pdf-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+}
+
+.video-thumbnail {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.video-container:hover .video-thumbnail {
+  transform: scale(1.03);
+}
+
+.video-tags {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  z-index: 2;
+}
+
+.video-tag {
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.tag-1 {
+  background-color: #e91e63;
+  color: white;
+}
+
+.tag-2 {
+  background-color: #ffad01;
+  color: white;
+}
+
+.tag-3 {
+  background: #ffffff;
+  color: green;
+}
+
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70px;
+  height: 70px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.play-button:hover {
+  background-color: white;
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.play-button i {
+  color: #e91e63;
+  font-size: 28px;
+  margin-left: 5px;
+}
+.play-button:hover i {
+  color: #ffad01;
+  font-size: 28px;
+  margin-left: 5px;
+}
+
+.video-title {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  right: 15px;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.2));
+  color: white;
+  padding: 15px;
+  font-weight: 600;
+  font-size: 18px;
+  border-radius: 0 0 10px 10px;
+  z-index: 2;
+}
+
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.3) 0%, transparent 35%);
+  z-index: 1;
+}
+
+.file-box {
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 15px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.file-box:hover {
+  transform: translateY(-5px);
+}
+
+.pdf-box {
+  background-color: #ffebee;
+  border-left: 5px solid #f44336;
+}
+
+.doc-box {
+  background-color: #e8eaf6;
+  border-left: 5px solid #3f51b5;
+}
+
+.ppt-box {
+  background-color: #fff8e1;
+  border-left: 5px solid #ffc107;
+}
+
+.other-box {
+  background-color: #e8f5e9;
+  border-left: 5px solid #4caf50;
+}
+
+.file-icon {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.pdf-icon {
+  color: #f44336;
+}
+
+.doc-icon {
+  color: #3f51b5;
+}
+
+.ppt-icon {
+  color: #ffc107;
+}
+
+.other-icon {
+  color: #4caf50;
+}
+
+.file-title {
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.file-description {
+    font-size: 0.9rem;
+    color: #555;
+    flex-grow: 1;
+    padding-top: 5px;
+}
+
+.file-actions {
+    display: flex;
+    justify-content: flex-end;
+    /* gap: 10px; */
+    margin-top: 15px;
+    padding: 0 15px 10px 15px;
+}
+
+.file-actions .btn-view {
+  background-color: white;
+  border: 1px solid #ddd;
+}
+
+.content-section-new {
+    padding: 30px;
+    background-color: #fff6f947;
+    border-radius: 10px;
+    height: 100%;
+    /* box-shadow: 0px 2px 20px 20px #9c9c9c05; */
+    border: 2px solid #ffd4e3;
+}
+.progress_wrapper .paddinger .content-section-new h4 {
+    margin-left: 0;
+	font-weight:400;
+}
+
+.progress_wrapper .paddinger .content-section-new > h3 {
+    margin-top:0;
+}
+
+.progress_wrapper .info-card.student-name h4:after {
+    height: 10px;
+    width: 10px;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    left: -1.2rem;
+    top: 10px;
+}
+.progress_wrapper .paddinger h4 {
+    margin-left: 25px;
+    font-weight: 500;
+}
+.progress_wrapper div#donut-chart {
+	 background-color: #fff6f9;
+    border: 2px solid #ffe0eb;
+    border-radius: 20px;
+    padding: 25px 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.progress_wrapper tspan {
+    font-family: 'DM SANS';
+}
+
+@media (max-width: 768px) {
+  .file-box {
+    margin-bottom: 15px;
+  }
+}
+
+.morris-hover.morris-default-style {
+  left: 4% !important;
+  top: 2% !important;
+  position: relative;
+  display: flex;
+  gap: 10px;
+}
+
+.morris-hover-row-label,
+.morris-hover.morris-default-style {
+  font-style: italic;
+  font-weight: 500;
+}
+
+.morris-hover.morris-default-style {
+  font-weight: 600;
+}
+
+.pdf-info i.pdf-icon-list {
+  color: #ffad01;
+  font-size: 35px;
+  margin: 0px 10px;
+}
+
+a.pdf-btn {
+  color: #e91e63;
+  border: 1px solid #e91e63;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+a.pdf-btn:hover {
+  color: #ffffff;
+  background: #e91e63;
+}
+
+a.pdf-btn.btn-type-two {
+  color: #3f51b5;
+  border: 1px solid #3f51b5;
+}
+
+a.pdf-btn.btn-type-two:hover {
+  color: #ffffff;
+  background: #2138b8;
+  border-color: #2138b8;
+}
+
+.paddinger {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.content-section-new h1,
+.content-section-new h2,
+.content-section-new h3,
+.content-section-new h4,
+.content-section-new h5,
+.content-section-new h6 {
+  margin: 20px 0px 10px 0px;
+}
+
+.content-section-new ul li p {
+    display: inline;
+    font-size: 15px;
+    color: #5e5e5e;
+}
+.content-section-new ul li {
+    /* padding-left: 15px; */
+}
+
+.content-section-new ul li::before {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    content: "\f054";
+    color: #ffad01;
+    margin-right: 10px;
+    font-size: 10px;
+}
+
+.file-actions a.view_btn {
+  background: white;
+  padding: 3px 10px;
+  border-radius: 5px;
+  border:transparent;
+}
+
+.paddinger .content-section-new ul {
+    margin-bottom: 20px;
+}
+
+.file-actions a.download_btn {
+  padding: 3px;
+  margin-left: 5px;
+}
+
+.file-actions a.download_btn:hover {
+  background: #fff;
+  border-radius: 5px;
+  padding: 3px 10px;
+}
+
+form.post-password-form,
+div.post-password-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+form.post-password-form input:not([type="password"]) {
+  border-radius: 0px 50px 50px 0px;
+}
+
+form.post-password-form input:not([type="submit"]) {
+  border-radius: 50px 0px 0px 50px;
+}
+
+div.post-password-form {
+  margin-bottom: 50px;
+  text-transform: capitalize;
+}
+
+.imaginary {
+  border-radius: 15px !important;
+}
+.progress_wrapper .paddinger img.wp-post-image {
+	background-color: #fff6f9;
+    border: 2px solid #ffe0eb;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.progress_wrapper .video-block.paddinger{
+	padding: 25px 0;
+}
+.progress_wrapper .video-block h4{
+	padding-left:0;
+}
+
+@media only screen and (max-width: 767px) {
+  .progress_wrapper .child-info-section .info-card, .progress_wrapper .col-md-4.side-bar-assignments-daily-modules {
+    margin-bottom: 30px;
+}
+}
+
+.single-progress .post-password-form {
+    background-color: #e8eaf645;
+    border: 2px solid #e8eaf6;
+    border-radius: 20px;
+    padding: 40px 20px 25px 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 65%;
+    margin: 50px auto;
+}
+
+.single-progress .password-notice {
+    padding: 20px 20px 25px 20px;
+    margin: 50px auto;
+	text-align:center;
+}
+
+.single-progress .password-notice h4{
+	font-size:18px;
+}

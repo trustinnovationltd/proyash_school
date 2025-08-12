@@ -1,0 +1,7 @@
+.sidebar-menu .nav-item > .nav-link {
+    margin-bottom: 2px;
+}
+.nav-link {
+    display: block;
+    padding: 5px 10px;
+}

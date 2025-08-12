@@ -1,0 +1,60 @@
+@font-face {
+    font-family: "flati_mycollection";
+    src: url("flaticon_mycollection00aa.woff2?00aab811a19cbb2fbaf0feb30fc2fee2") format("woff2"),
+url("flaticon_mycollection00aa.woff?00aab811a19cbb2fbaf0feb30fc2fee2") format("woff"),
+url("flaticon_mycollection00aa.eot?00aab811a19cbb2fbaf0feb30fc2fee2#iefix") format("embedded-opentype"),
+url("flaticon_mycollection00aa.ttf?00aab811a19cbb2fbaf0feb30fc2fee2") format("truetype"),
+url("flaticon_mycollection00aa.svg?00aab811a19cbb2fbaf0feb30fc2fee2#flaticon_mycollection") format("svg")
+}
+
+i[class^="flati-"]:before, i[class*=" flati-"]:before {
+    font-family: flati_mycollection !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.flati-gps:before {
+    content: "\f101";
+}
+.flati-location:before {
+    content: "\f102";
+}
+.flati-share:before {
+    content: "\f103";
+}
+.flati-family:before {
+    content: "\f104";
+}
+.flati-foster-family:before {
+    content: "\f105";
+}
+.flati-parental:before {
+    content: "\f106";
+}
+.flati-noise:before {
+    content: "\f107";
+}
+.flati-psychology:before {
+    content: "\f108";
+}
+.flati-asperger:before {
+    content: "\f109";
+}
+.flati-autism:before {
+    content: "\f10a";
+}
+.flati-search:before {
+    content: "\f10b";
+}
+.flati-envelope:before {
+    content: "\f10c";
+}
+.flati-phone:before {
+    content: "\f10d";
+}
+

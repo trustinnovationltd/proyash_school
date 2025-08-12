@@ -1,0 +1,65 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    /**
+     * Run the migrations.
+     */
+    public function up(): void
+    {
+        Schema::create('student_manual_attendance', function (Blueprint $table) {
+            $table->id();
+            $table->unsignedBigInteger('institute_id'); // Foreign Key to Institutes table
+            $table->unsignedBigInteger('academic_year_id'); // Foreign Key to Academic Years table
+            $table->unsignedBigInteger('medium_id'); // Foreign Key to Mediums table
+            $table->unsignedBigInteger('shift_id'); // Foreign Key to Shifts table
+            $table->unsignedBigInteger('class_id'); // Foreign Key to Classes table
+            $table->unsignedBigInteger('department_id'); // Foreign Key to Departments table
+            $table->unsignedBigInteger('section_setup_id'); // Foreign Key to Sections table
+            $table->unsignedBigInteger('student_id'); // Foreign Key to Students table
+            $table->string('student_name'); // Student Name
+            $table->string('student_roll'); // Student Roll
+            $table->time('in_time'); // In time
+            $table->time('out_time')->nullable(); // Out time (Optional)
+            $table->boolean('status')->default(true); // Status (Active/Inactive)
+            $table->unsignedBigInteger('created_by');
+            $table->unsignedBigInteger('updated_by')->nullable();
+            $table->unsignedBigInteger('deleted_by')->nullable();
+            $table->timestamps();
+            $table->softDeletes();
+
+            // Foreign Key Constraints
+            $table->foreign('institute_id')->references('id')->on('institutes')->onDelete('cascade');
+            $table->foreign('academic_year_id')->references('id')->on('academic_years')->onDelete('cascade');
+            $table->foreign('medium_id')->references('id')->on('mediums')->onDelete('cascade');
+            $table->foreign('shift_id')->references('id')->on('shifts')->onDelete('cascade');
+            $table->foreign('class_id')->references('id')->on('classes')->onDelete('cascade');
+            $table->foreign('department_id')->references('id')->on('departments')->onDelete('cascade');
+            $table->foreign('section_setup_id')->references('id')->on('section_setups')->onDelete('cascade');
+            $table->foreign('student_id')->references('id')->on('students')->onDelete('cascade');
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     */
+    public function down(): void
+    {
+        Schema::table('student_manual_attendance', function (Blueprint $table) {
+            $table->dropForeign(['institute_id']);
+            $table->dropForeign(['academic_year_id']);
+            $table->dropForeign(['medium_id']);
+            $table->dropForeign(['shift_id']);
+            $table->dropForeign(['class_id']);
+            $table->dropForeign(['department_id']);
+            $table->dropForeign(['section_setup_id']);
+            $table->dropForeign(['student_id']);
+        });
+
+        Schema::dropIfExists('student_manual_attendance');
+    }
+};
