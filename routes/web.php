@@ -26,7 +26,9 @@ use App\Http\Controllers\Backend\Leaves\EmployeeLeaveApplicationController;
 use App\Http\Controllers\Backend\Leaves\StudentLeaveApplicationController;
 use App\Http\Controllers\Backend\Exams\ExamMarksSetupController;
 use App\Http\Controllers\Backend\Exams\ExamSetupsController;
+use App\Http\Controllers\Backend\RoleController;
 use App\Http\Controllers\Backend\Students\StudentAttendence;
+use App\Http\Controllers\Backend\UserController;
 use App\Http\Controllers\Backend\Website\SettingsController;
 use App\Http\Controllers\Frontend\HomeController;
 use App\Http\Controllers\Frontend\ServiceController;
@@ -152,5 +154,14 @@ Route::prefix('admin')->middleware('auth')->group(function () {
     Route::post('institute_info/get_class_data', [InstituteInformationController::class, 'getClassData'])->name('institute_info.get_class_data');
     Route::post('institute_info/get_department_data', [InstituteInformationController::class, 'getDepartmentData'])->name('institute_info.get_department_data');
     // End:: Institute Information
+
+    //start:: role management
+    
+    Route::resources([
+        'role' => RoleController::class,
+        'users' => UserController::class,
+    ]);
+
+    //end:: role management
 
 });

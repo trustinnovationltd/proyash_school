@@ -67,100 +67,10 @@ $settings = WebsiteSettings::select('logo', 'title', 'phone', 'email')->first();
                 </li>
                 {{-- End:: Student admission --}}
 
-                {{-- Start:: Basic Settings --}}
-                <?php $menuArr = ['mediums', 'academic-years', 'academic-years', 'departments', 'shifts', 'exam-types', 'subjects', 'institutes', 'general-settings', 'holiday-settings', 'event-settings']; ?>
-                {{-- <li class="nav-item {{ in_array($currentControllerName, $menuArr) ? 'menu-open' : '' }}">
-                    <a href="#"
-                        class="nav-link {{ in_array($currentControllerName, $menuArr) ? 'menu-open' : '' }}"
-                        aria-expanded="{{ in_array($currentControllerName, $menuArr) ? 'active' : '' }}">
-                        <i class="nav-icon fas fa-cogs"></i>
-                        <p>
-                            {{ __('messages.basic_settings') }}
-                            <i class="nav-arrow bi bi-chevron-right"></i>
-                        </p>
-                    </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="{{ route('mediums.index') }}"
-                                class="nav-link {{ $currentControllerName == 'mediums' ? 'active' : '' }}">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>{{ __('messages.medium') }}</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{ route('academic-years.index') }}"
-                                class="nav-link {{ $currentControllerName == 'academic-years' ? 'active' : '' }}">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>{{ __('messages.academic_year') }}</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{ route('departments.index') }}"
-                                class="nav-link {{ $currentControllerName == 'departments' ? 'active' : '' }}">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>{{ __('messages.department') }}</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{ route('shifts.index') }}"
-                                class="nav-link {{ $currentControllerName == 'shifts' ? 'active' : '' }}">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>{{ __('messages.shift') }}</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{ route('exam-types.index') }}"
-                                class="nav-link {{ $currentControllerName == 'exam-types' ? 'active' : '' }}">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>{{ __('messages.exam_type') }}</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{ route('subjects.index') }}"
-                                class="nav-link {{ $currentControllerName == 'subjects' ? 'active' : '' }}">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>{{ __('messages.subject') }}</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{ route('institutes.index') }}"
-                                class="nav-link {{ $currentControllerName == 'institutes' ? 'active' : '' }}">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>{{ __('messages.institute') }}</p>
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a href="{{ route('general-settings.index') }}"
-                                class="nav-link {{ $currentControllerName == 'general-settings' ? 'active' : '' }}">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>{{ __('messages.general_settings') }}</p>
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a href="{{ route('holiday-settings.index') }}"
-                                class="nav-link {{ $currentControllerName == 'holiday-settings' ? 'active' : '' }}">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>{{ __('messages.holiday_settings') }}</p>
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a href="{{ route('event-settings.index') }}"
-                                class="nav-link {{ $currentControllerName == 'event-settings' ? 'active' : '' }}">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>{{ __('messages.event_settings') }}</p>
-                            </a>
-                        </li>
-
-                    </ul>
-                </li> --}}
-                {{-- End:: Basic Settings --}}
 
                 {{-- Start:: Class Configurations --}}
-                <?php $menuArr = ['class_setup', 'department_setup', 'classes', 'subject_setup']; ?>
-                <li class="nav-item {{ in_array($currentControllerName, $menuArr) ? 'menu-open' : '' }}">
+                <?php $menuArr = ['class_setup', 'department_setup', 'subject_setup']; ?>
+                {{-- <li class="nav-item {{ in_array($currentControllerName, $menuArr) ? 'menu-open' : '' }}">
                     <a href="#"
                         class="nav-link {{ in_array($currentControllerName, $menuArr) ? 'menu-open' : '' }}"
                         aria-expanded="{{ in_array($currentControllerName, $menuArr) ? 'active' : '' }}">
@@ -171,14 +81,6 @@ $settings = WebsiteSettings::select('logo', 'title', 'phone', 'email')->first();
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
-
-                        <li class="nav-item">
-                            <a href="{{ route('classes.index') }}"
-                                class="nav-link {{ $currentControllerName == 'classes' ? 'active' : '' }}">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>{{ __('messages.class') }}</p>
-                            </a>
-                            {{-- </li>
                         <li class="nav-item">
                             <a href="{{ route('class_setup.index') }}"
                                 class="nav-link {{ $currentControllerName == 'class_setup' ? 'active' : '' }}">
@@ -199,9 +101,9 @@ $settings = WebsiteSettings::select('logo', 'title', 'phone', 'email')->first();
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>{{ __('messages.subject_setup') }}</p>
                             </a>
-                        </li> --}}
+                        </li>
                     </ul>
-                </li>
+                </li> --}}
                 {{-- End:: Class Configuration --}}
 
                 {{-- Start:: Students --}}
@@ -400,6 +302,115 @@ $settings = WebsiteSettings::select('logo', 'title', 'phone', 'email')->first();
                     </ul>
                 </li>
                 {{-- End:: Website Settings --}}
+
+                {{-- Start:: Role Permission --}}
+                <li class="nav-item">
+                    <a href="{{ route(name: 'role.index') }}"
+                        class="nav-link  {{ $currentControllerName == 'role' || null ? 'active' : '' }} {{ $currentControllerName == null ? 'active' : '' }}">
+                        {{-- <i class="nav-icon bi bi-speedometer"></i> --}}
+                        <i class="nav-icon bi bi-shield-lock"></i>
+                        <p>{{ __('Role Permission') }}</p>
+                    </a>
+                </li>
+                {{-- End:: Role Permission --}}
+
+                {{-- Start:: Basic Settings --}}
+                <?php $menuArr = ['mediums', 'users']; ?>
+                <li class="nav-item {{ in_array($currentControllerName, $menuArr) ? 'menu-open' : '' }}">
+                    <a href="#"
+                        class="nav-link {{ in_array($currentControllerName, $menuArr) ? 'menu-open' : '' }}"
+                        aria-expanded="{{ in_array($currentControllerName, $menuArr) ? 'active' : '' }}">
+                        <i class="nav-icon fas fa-cogs"></i>
+                        <p>
+                            {{ __('messages.basic_settings') }}
+                            <i class="nav-arrow bi bi-chevron-right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{ route('users.index') }}"
+                                class="nav-link {{ $currentControllerName == 'users' ? 'active' : '' }}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>{{ __('Admins') }}</p>
+                            </a>
+                        </li>
+                        {{-- <li class="nav-item">
+                            <a href="{{ route('academic-years.index') }}"
+                                class="nav-link {{ $currentControllerName == 'academic-years' ? 'active' : '' }}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>{{ __('messages.academic_year') }}</p>
+                            </a>
+                        </li> --}}
+                        {{-- <li class="nav-item">
+                            <a href="{{ route('departments.index') }}"
+                                class="nav-link {{ $currentControllerName == 'departments' ? 'active' : '' }}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>{{ __('messages.department') }}</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('shifts.index') }}"
+                                class="nav-link {{ $currentControllerName == 'shifts' ? 'active' : '' }}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>{{ __('messages.shift') }}</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('classes.index') }}"
+                                class="nav-link {{ $currentControllerName == 'classes' ? 'active' : '' }}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>{{ __('messages.class') }}</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('exam-types.index') }}"
+                                class="nav-link {{ $currentControllerName == 'exam-types' ? 'active' : '' }}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>{{ __('messages.exam_type') }}</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('subjects.index') }}"
+                                class="nav-link {{ $currentControllerName == 'subjects' ? 'active' : '' }}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>{{ __('messages.subject') }}</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('institutes.index') }}"
+                                class="nav-link {{ $currentControllerName == 'institutes' ? 'active' : '' }}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>{{ __('messages.institute') }}</p>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="{{ route('general-settings.index') }}"
+                                class="nav-link {{ $currentControllerName == 'general-settings' ? 'active' : '' }}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>{{ __('messages.general_settings') }}</p>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="{{ route('holiday-settings.index') }}"
+                                class="nav-link {{ $currentControllerName == 'holiday-settings' ? 'active' : '' }}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>{{ __('messages.holiday_settings') }}</p>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="{{ route('event-settings.index') }}"
+                                class="nav-link {{ $currentControllerName == 'event-settings' ? 'active' : '' }}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>{{ __('messages.event_settings') }}</p>
+                            </a>
+                        </li> --}}
+
+                    </ul>
+                </li>
+                {{-- End:: Basic Settings --}}
 
             </ul>
         </nav>
